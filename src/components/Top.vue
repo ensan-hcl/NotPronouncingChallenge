@@ -1,6 +1,6 @@
 <template>
   <div id="top">
-    <h1><span>発音しない</span><span>チャレンジ</span></h1>
+    <h1><span class="text">発音しない</span><span class="text">チャレンジ</span></h1>
     <p class="quote">発音するの、もうやめませんか？</p>
     <input-word></input-word>
     <div align="center">
@@ -77,6 +77,10 @@ Vue.component('input-button', InputButton)
 .input:focus {
   outline: none;
   border-radius: 5px;
+}
+
+.text{
+  display: inline-block;
 }
 
 h1{
