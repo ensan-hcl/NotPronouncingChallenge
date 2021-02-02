@@ -68,7 +68,7 @@ export var ShareOnTwitter = Vue.extend({
   computed: {
     link: function() {
       const text = this.sharedState.result(this.sharedState.state.property.word).join('%0D%0A')
-      const url = `https://twitter.com/intent/tweet?text=${text}&hashtags=発音しないチャレンジ&url=hatsuonshinai.com`
+      const url = `https://twitter.com/intent/tweet?text=${text}&hashtags=発音しないチャレンジ&url=https://ensan-hcl.github.io/NotPronouncingChallenge/`
       return url
     }
   },    
