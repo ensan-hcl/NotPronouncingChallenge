@@ -11,6 +11,10 @@ var PropertyStore = {
         if (this.state.property.word.length == 0) {
           throw new Error('1文字以上入力してください')
         }
+        const data = this.state.property.word.match(/[^a-zA-Z \'\.,']/gi)
+        if (data){
+            throw new Error('英単語を入力してください')
+        }
         return true
     },
 
