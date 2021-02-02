@@ -92,16 +92,6 @@ h2 {
   font-weight: bold;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
 footer {
   padding: 20px 0px;
 }
