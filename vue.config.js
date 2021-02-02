@@ -1,4 +1,3 @@
 module.exports = {
-    assetsDir: './',
-    publicPath: './'
+    publicPath: './NotPronouncingChallenge/'
   }
