@@ -7,7 +7,7 @@
     <input-button></input-button>
     </div>
     <footer>
-    <router-link to="./references" target="_blank">参考資料</router-link>
+      <router-link to="./references" target="_blank">参考資料</router-link>
     </footer>
   </div>
 </template>
@@ -54,6 +54,7 @@ Vue.component('input-button', InputButton)
   border-radius: 0.5rem 0.5rem;
   padding: 10px;
   margin-top: 20px;
+  text-decoration: none;
 }
 .button:hover {
   background-color: #FF4500;

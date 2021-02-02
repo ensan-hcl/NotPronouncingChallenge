@@ -2,12 +2,12 @@
   <div id="result">
     <h1>チャレンジ結果</h1>
     <text-word></text-word>
+      <div align="center">
       <button-twitter></button-twitter>
-
-      <footer>
-        <div>
-      <a href="./reference" target="_blank">参考資料</a>
+      <button-top></button-top>
       </div>
+      <footer>
+        <router-link to="./references" target="_blank">参考資料</router-link>
       </footer>
   </div>
   
@@ -20,11 +20,12 @@ export default {
 }
 
 import PropertyStore from '../Models/PropertyStore.js'
-import {WordText, ShareOnTwitter} from './forms/Headers.js'
+import {TopButton, WordText, ShareOnTwitter} from './forms/Headers.js'
 
 //  コンポーネントを登録
 Vue.component('text-word', WordText)
 Vue.component('button-twitter', ShareOnTwitter)
+Vue.component('button-top', TopButton)
 
 </script>
 
@@ -37,17 +38,18 @@ Vue.component('button-twitter', ShareOnTwitter)
   color: orange;
   margin-top: 60px;
 }
-.link{
-  font-weight: bold;
+.twitter_link{
   color: white;
-  text-decoration: none;
+  display: block;
+  position: relative;
+  width: 50%;
+  max-width: 200px;
+  font-weight: bold;
   background-color: #55acee;
+  border: none;
+  border-radius: 0.5rem 0.5rem;
   padding: 10px;
-  border: solid;
-  border-width: 2px;
-  border-color: #55acee;
-  border-radius: 10px;
-
+  text-decoration: none;
 }
 
 .result_text {
@@ -71,6 +73,7 @@ li {
 }
 
 footer {
+  display: block;
   padding: 20px 0px;
 }
 

@@ -38,6 +38,45 @@ export  var InputButton = Vue.extend({
   }
 })
  
+
+//遷移ボタン
+export  var TopButton = Vue.extend({
+  name: 'top-button',
+  template: '<div><button class="button" v-on:click="top">もう一度遊ぶ</button></div>',
+  data: function () {
+    return {
+      privateState: {},
+      sharedState: PropertyStore
+    }
+  },
+  methods: {
+    top: function (event) {
+        this.$router.push('/')
+    }
+  }
+})
+
+
+export var ShareOnTwitter = Vue.extend({
+  name: 'twitter-button',
+  template: '<div><button class="twitter_link" v-bind:onclick="link">ツイートする</button></div>',
+  data: function () {
+    return {
+      privateState: {},
+      sharedState: PropertyStore
+    }
+  },
+  computed: {
+    link: function() {
+      const text = this.sharedState.result(this.sharedState.state.property.word).join('%0D%0A')
+      const url = `https://twitter.com/intent/tweet?text=${text}&hashtags=発音しないチャレンジ&url=https://ensan-hcl.github.io/NotPronouncingChallenge/`
+      return `location.href='${url}'`
+    }
+  },    
+})
+
+
+
 export var WordText = Vue.extend({
   name: 'text-word',
   template: '<ul><p class="result_text" v-for="value in results">{{ value }}</p></ul>',
@@ -55,21 +94,3 @@ export var WordText = Vue.extend({
   },    
 })
 
-
-export var ShareOnTwitter = Vue.extend({
-  name: 'twitter-button',
-  template: '<a v-bind:href="link" class="link">ツイートする</a>',
-  data: function () {
-    return {
-      privateState: {},
-      sharedState: PropertyStore
-    }
-  },
-  computed: {
-    link: function() {
-      const text = this.sharedState.result(this.sharedState.state.property.word).join('%0D%0A')
-      const url = `https://twitter.com/intent/tweet?text=${text}&hashtags=発音しないチャレンジ&url=https://ensan-hcl.github.io/NotPronouncingChallenge/`
-      return url
-    }
-  },    
-})
