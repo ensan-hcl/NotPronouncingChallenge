@@ -3,7 +3,9 @@
     <h1><span>発音しない</span><span>チャレンジ</span></h1>
     <p class="quote">発音するの、もうやめませんか？</p>
     <input-word></input-word>
+    <div align="center">
     <input-button></input-button>
+    </div>
     <footer>
     <router-link to="./references" target="_blank">参考資料</router-link>
     </footer>
@@ -41,19 +43,17 @@ Vue.component('input-button', InputButton)
   padding: 5px;
 }
 .button {
+  color: white;
   display: block;
   position: relative;
-  margin: 0 auto;
   width: 50%;
   max-width: 200px;
-  color: white;
   font-weight: bold;
   background-color: #FF7F50;
-  border-radius: 0.5rem 0.5rem;
   border: none;
+  border-radius: 0.5rem 0.5rem;
   padding: 10px;
   margin-top: 20px;
-  text-decoration: none;
 }
 .button:hover {
   background-color: #FF4500;

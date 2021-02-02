@@ -5,7 +5,9 @@
       <button-twitter></button-twitter>
 
       <footer>
+        <div>
       <a href="./reference" target="_blank">参考資料</a>
+      </div>
       </footer>
   </div>
   
@@ -52,33 +54,6 @@ Vue.component('button-twitter', ShareOnTwitter)
   font-family: Helvetica;
   font-weight: bold;
   font-size: 1.7em;
-}
-.button {
-  display: block;
-  position: relative;
-  margin: 0 auto;
-  width: 50%;
-  max-width: 200px;
-  background-color: white;
-  border: solid 1px silver;
-  border-radius: 0.5rem 0.5rem;
-  padding: 10px;
-  margin-top: 1rem;
-  text-decoration: none;
-}
-
-.input{
-  text-align: center;
-  font-size: x-large;
-  width: 80%;
-  max-width: 500px;
-  height: 3em;
-  padding: 10px;
-  border-color: gray;
-  border-radius: 10px;
-}
-.input:focus {
-  border-radius: 5px;
 }
 
 h1, h2 {
